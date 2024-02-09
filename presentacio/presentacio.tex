@@ -1,0 +1,284 @@
+\documentclass{beamer}
+\usepackage[utf 8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[catalan,english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage{multirow}
+
+\mode<presentation>{
+\usetheme{Boadilla}
+\usecolortheme{seahorse}
+}
+
+\title[Sistema termoel\`{e}ctric a la nanoscala]{{\textbf{Modelitzaci\'{o} d'un sistema termoel\`{e}ctric a la nanoscala a trav\'{e}s d'una equaci\'{o} hidrodin\`{a}mica}}}
+\author[Alejandro Plaza Gall\'{a}n]{\huge{Alejandro Plaza Gall\'{a}n}\\\vspace{2mm}\Large{Supervisat per: F. Xavier \'{A}lvarez Calafell\\ i Albert Beardo Ricol}\vspace{-0.5cm}}
+\date{Setembre de 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\centering
+\includegraphics[width=0.30\textwidth]{../grafics/logo-uab.png}\par\vspace{1cm}
+\end{frame}
+
+\begin{frame}{Introducci\'{o}}
+\begin{itemize}
+\item Els components dels aparells electr\`{o}nics s\'{o}n cada cop m\'{e}s petits
+\pause
+\vspace{5mm}
+\item Aix\`{o} augmenta la calor produ\"{i}da
+\pause
+\vspace{5mm}
+\item S'han de buscar maneres de dissipar la calor
+\pause
+\vspace{5mm}
+\item La llei de Fourier \'{e}s l'equaci\'{o} cl\`{a}ssica per la conducci\'{o} de la calor
+\pause
+\vspace{5mm}
+\item A la nanoscala es necessita un nou model: el model hidrodin\`{a}mic
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objectius}
+\begin{itemize}
+\item Objectiu principal: dissenyar un invent tecnol\`{o}gic per disminuir la temperatura dels components electr\`{o}nics
+\pause
+\vspace{5mm}
+\item Per all\`{o}:
+\vspace{5mm}
+\begin{itemize}
+\item Comparar els dos models amb dades experimentals
+\pause
+\vspace{5mm}
+\item Fer simulacions per veure la necessitat del model hidrodin\`{a}mic
+\pause
+\vspace{5mm}
+\item Simular un conductor escalfat sobre un substrat de silici
+\pause
+\vspace{5mm}
+\item Afegir-hi un l\`{a}ser per refredar-lo
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Llei de Fourier}
+
+\tikzset{every picture/.style={line width=0.75pt}}
+\begin{figure}
+\begin{center}
+\input{../grafics/esquema/flux-superficie.tex}
+\end{center}
+\end{figure}
+\pause
+Equaci\'{o} de la llei de Fourier:
+\[\boldsymbol q=-\kappa\nabla T\]
+\pause
+\vspace{-6mm}
+\begin{itemize}
+\item $\boldsymbol q$: flux de calor
+\pause
+\item $T$: temperatura
+\pause
+\item $\kappa$: conductivitat t\`{e}rmica
+\end{itemize}
+\end{frame}
+
+%\begin{frame}{Llei de Fourier}
+%Equaci\'{o} de conservaci\'{o} de l'energia:
+%\[\rho c_e\dot{T}+\nabla\cdot\boldsymbol q=Q,\]
+%\pause
+%
+%on $\rho$ \'{e}s la densitat,
+%\pause
+%
+%$c_e$ \'{e}s la calor espec\'{i}fica,
+%\pause
+%
+%$Q$ \'{e}s la densitat de la font de calor.
+%\pause
+%\vspace{3mm}
+%
+%Nom\'{e}s estudiarem estats estacionaris, pels quals les derivades temporals seran 0.
+%\pause
+%
+%Per tant no caldran condicions inicials, nom\'{e}s condicions de contorn.
+%\end{frame}
+%
+\begin{frame}{Model hidrodin\`{a}mic}
+Equaci\'{o} hidrodin\`{a}mica:
+\[\tau\dot{\boldsymbol q}+\boldsymbol q=-\kappa\nabla T+\ell^2\big(\nabla^2\boldsymbol q+2\nabla(\nabla\cdot\boldsymbol q)\big)\]
+\pause
+\begin{itemize}
+\item $\tau$: temps de relaxaci\'{o} del flux
+\pause
+\item $\ell$: dist\`{a}ncia no local
+\end{itemize}
+\pause
+\vspace{4mm}
+
+%Aquests par\`{a}metres s\'{o}n intr\'{i}nsecs, \'{e}s a dir, no depenen de la geometria del sistema.
+%
+A grans escales, $\tau$ i $\ell$ es tornen negligibles i recuperem la llei de Fourier
+\end{frame}
+
+
+\begin{frame}{L\`{a}mina fina de silici}
+\vspace{-6mm}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.45]{../grafics/film/tf-temperatura.pdf}
+\end{center}
+\end{figure}
+\vspace{-4mm}
+\begin{itemize}
+\item Simulem una secci\'{o} d'una fina l\`{a}mina de silici
+\pause
+\item Gradient de temperatures horitzontal
+\pause
+\item Condicions de contorn:
+\begin{itemize}
+\item Paret esquerra: 300,5 K
+\pause
+\item Paret dreta: 299,5 K
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{L\`{a}mina fina de silici}
+\begin{figure}
+\begin{center}
+\vspace{-4mm}
+Perfil del flux de calor respecte la posici\'{o} $y$ segons:
+\begin{subfigure}{0.49\textwidth}
+\begin{itemize}
+\item Fourier (morat)
+\item Hidrodin\`{a}mic (verd)
+\item Fourier amb $\kappa_{\text{eff}}$ (blau)
+\end{itemize}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\caption*{$H=3$ $\upmu$m}
+\vspace{-2mm}
+\includegraphics[scale=0.235]{../grafics/film/3-mum.png}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\caption*{$H=$ 1,6 $\upmu$m}
+\vspace{-2mm}
+\includegraphics[scale=0.235]{../grafics/film/1-6-mum.png}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\caption*{$H=$ 0,42 $\upmu$m}
+\vspace{-2mm}
+\includegraphics[scale=0.235]{../grafics/film/0-42-mum.png}
+\end{subfigure}
+\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}{L\`{a}mina fina de silici}
+Conductivitat t\`{e}rmica del silici: $150$ W/mK
+\begin{table}[ht!]
+\centering
+\label{Tab:keff}
+\begin{tabular}{c|c|c}
+\multirow{3}{*}{$\boldsymbol H$ \textbf{(}$\boldsymbol\upmu$\textbf{m)}}&$\boldsymbol\kappa_{\text{\textbf{eff}}}$ \textbf{calculada (W/mK)}&$\boldsymbol\kappa_{\text{\textbf{eff}}}$ \textbf{experimental (W/mK)}\vspace{-0.7mm}\\
+&\multirow{2}{*}{\footnotesize{(presa de la simulaci\'{o})}}&\footnotesize{(presa de Beardo \emph{et al.}}\vspace{-0.7mm}\\
+&&\footnotesize{Phys. Rev. Appl. 2019)}\\\hline
+$3,0$&$141$&$138$\\
+\pause
+$1,6$&133&134\\
+\pause
+$0,42$&$92,9$&$86,6$
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Barra d'or sobre un substrat de silici}
+
+\begin{figure}
+\begin{center}
+\input{../grafics/esquema/esquema-sobri.tex}
+\end{center}
+\end{figure}
+\begin{itemize}
+\item Simulem un conductor (or) sobre un substrat (silici)
+\pause
+\item Posem una font de calor a l'or
+\pause
+\item La font de calor simula un escalfament per efecte Joule
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Barra d'or sobre un substrat de silici}
+\vspace{-3mm}
+\begin{center}\textbf{Temperatura respecte la posici\'{o} $x$ adalt del sistema segons:}\end{center}
+\begin{itemize}
+\item Fourier (morat)
+
+\item Hidrodin\`{a}mic (blau)
+
+\item Fourier amb $\kappa_{\text{eff}}$ (verd)
+\vspace{0.7mm}
+
+\item Dades experimentals (taronja) \footnotesize{(de Torres \emph{et al.} Phys. Rev. Appl. 2018)}
+\end{itemize}
+\vspace{-2mm}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.4]{../grafics/estacionari/experimentals.png}
+\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Barra d'or sobre un substrat escalfat per un l\`{a}ser}
+Hi afegim un l\`{a}ser de profunditat \`{o}ptica $14$ nm
+
+$\ell=160$ nm (valor intr\'{i}nsec) $\longrightarrow$ $\ell_{\text{eff}}=14$ nm (valor efectiu)
+\pause
+
+\begin{center}\textbf{Perfil de la temperatura respecte la posici\'{o} $x$ segons:}\end{center}
+\vspace{-5mm}
+\begin{itemize}
+\item Fourier (morat)
+\item Hidrodin\`{a}mic (verd)
+\end{itemize}
+\begin{figure}
+\begin{center}
+\begin{subfigure}{0.49\textwidth}
+\vspace{-2mm}
+\includegraphics[scale=0.235]{../grafics/estacionari/teoriques-laser.png}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\vspace{-2mm}
+\includegraphics[scale=0.235]{../grafics/periodic/teoriques-laser.png}
+\end{subfigure}
+\end{center}
+\end{figure}
+\pause
+La $T$ de l'or baixa de 326,9 K (sense el l\`{a}ser) $\longrightarrow$ 323,6 K (amb el l\`{a}ser)
+\end{frame}
+
+\begin{frame}{Conclusions}
+\begin{itemize}
+\item Hem posat a prova la llei de Fourier a la nanoscala.
+\pause
+\item Hem observat experimentalment una disminuci\'{o} en el flux no predita per aquesta llei a una fina l\`{a}mina de silici.
+\pause
+\item Aquesta disminuci\'{o} s'ajusta b\'{e} a un nou model: l'hidrodin\`{a}mic.
+\pause
+\item Simulant un conductor escalfat sobre un substrat de silici, hem tornat a veure que nom\'{e}s el model hidrodin\`{a}mic s'adapta a les dades experimentals.
+\pause
+\item Finalment, hi hem afegit un l\`{a}ser que ha aconseguit reduir la temperatura.
+\pause
+\item Aix\`{o} pot tenir importants aplicacions a la inform\`{a}tica en el refredament de components electr\`{o}nics.
+\end{itemize}
+\end{frame}
+
+\end{document}
