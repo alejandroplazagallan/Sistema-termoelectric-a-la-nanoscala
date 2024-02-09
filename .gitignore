@@ -1,0 +1,13 @@
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.bbl
+*.blg
+*.png
+!grafics/esquema/esquema.png
+memoria/memoria.pdf
+presentacio/presentacio.pdf
