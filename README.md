@@ -10,7 +10,7 @@ En un recent treball s&rsquo;ha vist que, quan s&rsquo;escalfa directament un su
 
 ### Gr&agrave;fics
 
-Per comen&ccedil;ar, s&rsquo;han de compilar els gr&agrave;fics. Per aix&ograve;, cal executar les seq&uuml;&egrave;ncies de comandes de [Gnuplot](www.gnuplot.info) que se troben a la carpeta [scripts](scripts). Per aix&ograve;, s&rsquo;obre una terminal de Gnuplot, es posa el directori on es troba l&rsquo;*script* i es carrega amb la funci&oacute; `load`. Exemple:
+Per comen&ccedil;ar, s&rsquo;han de compilar els gr&agrave;fics. Per aix&ograve;, cal executar les seq&uuml;&egrave;ncies de comandes de [Gnuplot](http://www.gnuplot.info) que se troben a la carpeta [scripts](scripts). Per aix&ograve;, s&rsquo;obre una terminal de Gnuplot, es posa el directori on es troba l&rsquo;*script* i es carrega amb la funci&oacute; `load`. Exemple:
 
 ```
 cd "scripts/film"
