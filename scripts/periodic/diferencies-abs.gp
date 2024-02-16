@@ -1,6 +1,10 @@
+# grafic de les diferencies en la temperatura predita a l'or per Fourier i KCM
+# inclou les dades simulades sense i amb el laser
+# desar amb el nom "diferencies-abs.png" al directori "grafics/periodic"
+
 unset xrange
 unset yrange
-#unset key
+unset key
 set xlabel "Amplada (m)"
 set ylabel "T_{KCM} - T_{Fou} (K)"
 plot \

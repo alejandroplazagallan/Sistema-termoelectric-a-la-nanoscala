@@ -1,3 +1,8 @@
+# grafic de la temperatura al substrat i a l'or sense el laser
+# inclou dades simulades de Fourier, Fourier efectiu i KCM, i les experimentals
+# a la simulacio es van prendre els parametres de l'experiment
+# desar amb el nom "experimentals.png" al directori "grafics/estacionari"
+
 set xrange [-3e-6:3e-6]
 set yrange [295:335]
 unset key

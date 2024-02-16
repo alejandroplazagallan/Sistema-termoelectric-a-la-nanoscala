@@ -1,3 +1,7 @@
+# grafic del flux de calor simulat a una lamina de 0,42 micrometres
+# inclou les dades segons Fourier, KCM i Fourier amb conductivitat efectiva
+# desar amb el nom "0-42-mum.png" al directori "grafics/film"
+
 set xrange [-0.21e-6:0.21e-6]
 unset yrange
 set key default
