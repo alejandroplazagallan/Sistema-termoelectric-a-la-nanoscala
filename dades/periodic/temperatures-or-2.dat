@@ -1,0 +1,16 @@
+% Model:              Periodic.mph
+% Version:            COMSOL 5.3.1.275
+% Date:               Jul 27 2021, 14:09
+% Table:              Table 1 - Point Evaluation 2 (T2)
+% Temperature (K), Point: (0, 2.5068E-4)Temperature (K), Point: (0, 2.5056E-4)Temperature (K), Point: (0, 2.5045E-4)Temperature (K), Point: (0, 2.5034E-4)Temperature (K), Point: (0, 2.5023E-4)Temperature (K), Point: (0, 2.5018E-4)Temperature (K), Point: (0, 2.5014E-4)Temperature (K), Point: (0, 2.5009E-4)Temperature (K), Point: (0, 2.5007E-4)Temperature (K), Point: (0, 2.5005E-4)Temperature (K), Point: (0, 2.5002E-4)
+3000	417.90096198209926       
+2500	402.889801411613         
+2000	387.3728375394892        
+1500	371.2493674052583        
+1000	354.22437487123125       
+800	347.1610622769123        
+600	339.7060021596161        
+400	332.21482576331437       
+300	328.0810116267775        
+200	323.6810366602756        
+100	319.2212541667763

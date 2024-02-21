@@ -3,6 +3,7 @@
 # es van triar uns parametres que accentuessin les diferencies
 # desar amb el nom "teoriques.png" al directori "grafics/estacionari"
 
+set term wxt
 set xrange [-3e-6:3e-6]
 set yrange [295:335]
 unset key

@@ -3,6 +3,7 @@
 # a la simulacio es van prendre els parametres de l'experiment
 # desar amb el nom "experimentals.png" al directori "grafics/estacionari"
 
+set term wxt
 set xrange [-3e-6:3e-6]
 set yrange [295:335]
 unset key

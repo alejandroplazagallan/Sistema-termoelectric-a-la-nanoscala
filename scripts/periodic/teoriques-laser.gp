@@ -3,6 +3,7 @@
 # grafic generat per la presentacio
 # desar amb el nom "teoriques-laser.png" al directori "grafics/periodic"
 
+set term wxt
 set encoding iso_8859_1
 set xrange [-3e-6:3e-6]
 set yrange [295:335]

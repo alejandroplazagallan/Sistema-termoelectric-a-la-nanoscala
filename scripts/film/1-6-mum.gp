@@ -2,6 +2,7 @@
 # inclou les dades segons Fourier, KCM i Fourier amb conductivitat efectiva
 # desar amb el nom "1-6-mum.png" al directori "grafics/film"
 
+set term wxt
 unset xrange
 unset yrange
 set key default

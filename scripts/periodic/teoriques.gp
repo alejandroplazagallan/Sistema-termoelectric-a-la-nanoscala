@@ -2,6 +2,7 @@
 # inclou les dades segons la llei de Fourier i el KCM
 # desar amb el nom "teoriques.png" al directori "grafics/periodic"
 
+set term wxt
 set xrange [-3e-6:3e-6]
 set yrange [295:335]
 unset key

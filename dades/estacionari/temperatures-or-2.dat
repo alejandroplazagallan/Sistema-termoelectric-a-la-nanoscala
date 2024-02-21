@@ -1,0 +1,16 @@
+% Model:              Estacionari diferencies.mph
+% Version:            COMSOL 5.3.1.275
+% Date:               Jul 27 2021, 13:25
+% Table:              Table 9 - Point Evaluation 2 (T2)
+% Temperature (K), Point: (0, 2.5068E-4)Temperature (K), Point: (0, 2.5056E-4)Temperature (K), Point: (0, 2.5045E-4)Temperature (K), Point: (0, 2.5034E-4)Temperature (K), Point: (0, 2.5023E-4)Temperature (K), Point: (0, 2.5018E-4)Temperature (K), Point: (0, 2.5014E-4)Temperature (K), Point: (0, 2.5009E-4)Temperature (K), Point: (0, 2.5007E-4)Temperature (K), Point: (0, 2.5005E-4)Temperature (K), Point: (0, 2.5002E-4)
+3000	416.0611569038503        
+2500	401.23520117537737       
+2000	385.91754837163575       
+1500	369.8526742644069        
+1000	353.177685630262         
+800	346.31368020960133       
+600	339.319617225921         
+400	332.4830440122766        
+300	329.18572010307423       
+200	326.91560632981225       
+100	328.05348734045015
