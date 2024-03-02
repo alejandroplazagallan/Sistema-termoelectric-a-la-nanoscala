@@ -2,7 +2,10 @@
 # inclou les dades segons Fourier, KCM i Fourier amb conductivitat efectiva
 # desar amb el nom "0-42-mum.png" al directori "grafics/film"
 
-set term wxt
+set terminal \
+  wxt \
+    size 640,384 \
+    font "Sans,10"
 set xrange [-0.21e-6:0.21e-6]
 unset yrange
 set key default
@@ -10,17 +13,17 @@ set xlabel "y (m)"
 set ylabel "Flux de calor (W/m^2)"
 plot \
   "../../dades/film/0-42-mum-1.dat" \
-    u 1:2 \
+    using 1:2 \
     with lines \
-    lw 3 \
+    linewidth 3 \
     notitle, \
   "../../dades/film/0-42-mum-2.dat" \
-    u 1:2 \
+    using 1:2 \
     with lines \
-    lw 3 \
+    linewidth 3 \
     notitle, \
   "../../dades/film/0-42-mum-3.dat" \
-    u 1:2 \
+    using 1:2 \
     with lines \
-    lw 3 \
+    linewidth 3 \
     notitle

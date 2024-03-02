@@ -10,5 +10,6 @@
 *.png
 !grafics/logo-uab.png
 !grafics/esquema/esquema.png
+memoria/niu.tex
 memoria/memoria.pdf
 presentacio/presentacio.pdf
